@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    transition: all 0.2s ease-in-out;
+}
+
+#taskList li.dragging {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: grabbing;
+}
+
+.placeholder {
+    background-color: #f0f8ff;
+    border: 2px dashed #007bff;
+    height: 40px; /* Match the approximate height of a list item */
+    margin: 5px 0;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#taskList li .delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
